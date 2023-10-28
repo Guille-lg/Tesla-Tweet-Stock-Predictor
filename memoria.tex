@@ -268,7 +268,33 @@
                 A continuación, se llevará a cabo la limpieza y preprocesameinto de los datos tratados en la caracterización.
 
                 \section{Dataset de Tweets de Tesla}
-                
+
+                        Tras haber obtenido extensa información valiosa sobre el dataset en la etapa de caracterización, 
+                        se procede a la preparación de los datos para ser etiquetados por el autor del trabajo. Se procesó
+                        sobretodo la columna de texto, ya que es la única que contiene información relevante para el modelo de análisis de sentimiento.\\
+
+                        Para obtener las cadenas de texto más significativas y con mayor poder de predicción para el modelo es necesario 
+                        realizar unalimpieza de todos aquellas palabras, caracteres y otros símbolos que no aportan información relevante.
+                        Es necesario notar además la dificultad añadida que presentan las cadenas de texto tratadas en este trabajo, ya que
+                        los tweets son textos cortos, con gran número de abreviaciones y errores ortográficos, pero sobretodo por el uso de 
+                        funcionalidades propias de la plataforma, como menciones, hashtags o retweets. Para ello, se utilizó la librería \textit{tweet-preprocessor}\cite{tweet-preprocessor}. Con ella, se eliminaron emojis, menciiones, palabras reservadas de twitter, emojis de texto, hashtags, urls y números.\\
+
+                        Además, es necesario tener en cuenta que el modelo de análisis de sentimiento a utilizar solo aceptará texto en idioma inglés,
+                        por lo que es necesario eliminar todos aquellos tweets que no estén escritos en esta lengua. Para ello se utilizó la
+                        librería \textit{langdetect} \cite{langdetect}, que permite detectar el idioma de un texto utilizando la librería de detección de lenguas de Google.\\
+
+                        Habiendo filtrado los tweets en inglés y haber eliminado todos aquellos caracteres y palabras no deseados, se eliminaron también signos de puntuación restantes 
+                        y las stopwords de la lengua inglesa, utilizando la librería \textit{nltk}.\\
+
+                        Por último, como fue constatado en la caracterización de datos, existen días en los que los mercados no están abiertos.
+                        Esto puede llegar a ser problemático para el modelo, ya que pueden existir tendencias en un hiato de varios días que no serían capturadas por el modelo. Para su simplificación,
+                        se ha optado por eliminar todos aquellos tweets que no se encuentren en los días recogidos en el dataset de valores de la empresa, pero
+                        sería interesante explorar esta posibilidad en una futura revisión de este trabajo.\\
+
+                \section{Dataset de Datos Financieros de Tesla}
+
+                        
+                        
 
                         
 
