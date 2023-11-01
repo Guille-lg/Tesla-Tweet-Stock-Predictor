@@ -1,5 +1,5 @@
 {
-  "_name_or_path": "./models/sentence-transformers_all-mpnet-base-v2\\",
+  "_name_or_path": "C:\\Users\\34644/.cache\\torch\\sentence_transformers\\sentence-transformers_all-mpnet-base-v2\\",
   "architectures": [
     "MPNetModel"
   ],

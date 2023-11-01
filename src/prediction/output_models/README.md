@@ -7,7 +7,7 @@ tags:
 pipeline_tag: text-classification
 ---
 
-# output_models
+# C:\Users\34644\Desktop\Cursos\Curso_CEI\Tesla-Tweet-Stock-Predictor\src\prediction\output_models
 
 This is a [SetFit model](https://github.com/huggingface/setfit) that can be used for text classification. The model has been trained using an efficient few-shot learning technique that involves:
 
@@ -28,7 +28,7 @@ You can then run inference as follows:
 from setfit import SetFitModel
 
 # Download from Hub and run inference
-model = SetFitModel.from_pretrained("output_models")
+model = SetFitModel.from_pretrained("C:\Users\34644\Desktop\Cursos\Curso_CEI\Tesla-Tweet-Stock-Predictor\src\prediction\output_models")
 # Run inference
 preds = model(["i loved the spiderman movie!", "pineapple on pizza is the worst 🤮"])
 ```
